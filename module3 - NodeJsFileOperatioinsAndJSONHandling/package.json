@@ -1,0 +1,13 @@
+{
+  "name": "module3---nodejsfileoperatioinsandjsonhandling",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
