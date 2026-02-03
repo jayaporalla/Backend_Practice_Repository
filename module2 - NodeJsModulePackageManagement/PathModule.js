@@ -7,7 +7,7 @@ import path from 'path';
 
 console.log(path.join("Jayasri", "Images"));
 
-console.log(path.resolve("PathModule.js"));
+console.log(path.resolve("PathModule.js")); // resolve means it will print whole path
 
 const filePath = "c:/Program Files/GFG Pratice Folder/Backend_Practice_Repository/module2 - NodeJsModulePackageManagement";
 console.log(path.dirname(filePath));
