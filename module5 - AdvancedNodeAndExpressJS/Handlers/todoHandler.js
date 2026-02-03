@@ -1,4 +1,4 @@
-import { todos } from "../data/todo.js"
+import { setTodo, todos } from "../data/todo.js"
 import Todo from "../model/todoModel.js";
 
 export const getAllTodo = (req, res) => {
@@ -6,7 +6,7 @@ export const getAllTodo = (req, res) => {
         return res.status(200).json({ todos });
     } catch (error) {
         console.log("Error occured of getAllTodo");
-        return res.status(500).status({ message: "Something went wrong" });
+        return res.status(500).json({ message: "Something went wrong" });
     }
 }
 
@@ -18,7 +18,7 @@ export const createTodo = (req, res) => {
         return res.status(201).json({ todo: todo });
     } catch (error) {
         console.log("Error occured of createTodo");
-        return res.status(500).status({ message: "Something went wrong" });
+        return res.status(500).json({ message: "Something went wrong" });
     }
 }
 
@@ -32,7 +32,7 @@ export const updateTodo = (req, res) => {
         return res.status(201).json({ todo: todo });
     } catch (error) {
         console.log("Error occured of updateTodo");
-        return res.status(500).status({ message: "Something went wrong" });
+        return res.status(500).json({ message: "Something went wrong" });
     }
 }
 
@@ -40,10 +40,10 @@ export const deleteTodo = (req, res) => {
     try {
         const id = req.params.id;
         const todo = todos.filter((t) => t.id !== id);
-        todos = todo;
-        return res.status(200).json({ message: "Deleted Successfully" });
+        setTodo(todo);
+        return res.status(201).json({ message: "Deleted Successfully" });
     } catch (error) {
         console.log("Error occured of updateTodo");
-        return res.status(500).status({ message: "Something went wrong" });
+        return res.status(500).json({ message: "Something went wrong" });
     }
 }
