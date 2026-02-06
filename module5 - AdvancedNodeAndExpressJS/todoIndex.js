@@ -10,4 +10,4 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use("/api/v1", todoRouter);
 
-app.listen(5000, () => console.log(`Server started on 5000`));
+app.listen(3000, () => console.log(`Server started on 3000`));
