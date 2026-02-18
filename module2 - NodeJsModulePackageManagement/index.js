@@ -18,9 +18,9 @@
 // console.log(`mod - ${mod}`);
 
 // Importing using ECMA style
-import ClassA, {add as Add} from "./Calculator.js";
+import B, {add as Add} from "./Calculator.js";
 
-const a = new ClassA();
+const a = new B();
 console.log(Add(10, 10));
 
 //importing global name
@@ -28,4 +28,4 @@ import "./Global.js"
 console.log(global.name);
 global.setName("Chechi");
 console.log(global.getName());
-console.log(process); //returns about node js data and also remote system data
+// console.log(process); //returns about node js data and also remote system data
